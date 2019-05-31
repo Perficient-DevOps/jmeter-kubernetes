@@ -1,11 +1,11 @@
-# build
+# Build
 FROM golang:1.8-stretch AS build
 WORKDIR /go/src/${owner:-github.com/IzakMarais}/reporter
 RUN apt-get update && apt-get install -y make git
 RUN git clone https://${owner:-github.com/IzakMarais}/reporter .
 RUN make build
 
-# create image
+# Create Image
 FROM debian:stretch
 RUN PACKAGES="wget libswitch-perl" \
     && apt-get update \
