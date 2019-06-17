@@ -1,3 +1,3 @@
-// Update below with latest base
-FROM kubernautslabs/jmeter-base:latest
+# Update below with latest base
+FROM quay.io/mkorejo/jmeter_base:latest
 EXPOSE 60000
